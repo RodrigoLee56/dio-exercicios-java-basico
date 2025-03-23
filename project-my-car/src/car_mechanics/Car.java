@@ -50,6 +50,20 @@ public class Car {
 		}
 	}
 
+	// Método para diminuir a velocidade do carro
+	public void decreaseSpeed() {
+		if (carIsOn) {
+			if (speed > 0) {
+				speed--;
+				System.out.println("Diminuindo velocidade... Velocidade atual: " + speed + " km/h");
+			} else {
+				System.out.println("O carro já está parado.");
+			}
+		} else {
+			System.out.println("Não é possível diminuir a velocidade. O carro está desligado.");
+		}
+	}
+
 	// Método privado para obter a velocidade máxima permitida para a marcha atual
 	private int getMaxSpeedForGear(int gear) {
 		switch (gear) {
