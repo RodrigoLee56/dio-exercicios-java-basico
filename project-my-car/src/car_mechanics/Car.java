@@ -64,6 +64,11 @@ public class Car {
 		}
 	}
 
+	// Método para verificar a velocidade
+	public void checkSpeed() {
+		System.out.println("Velocidade atual: " + speed + " km/h");
+	}
+
 	// Método privado para obter a velocidade máxima permitida para a marcha atual
 	private int getMaxSpeedForGear(int gear) {
 		switch (gear) {
