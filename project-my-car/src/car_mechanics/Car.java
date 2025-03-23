@@ -69,6 +69,24 @@ public class Car {
 		System.out.println("Velocidade atual: " + speed + " km/h");
 	}
 
+	// Método para trocar a marcha
+	public void changeGear(int newGear) {
+		if (carIsOn) {
+			if (newGear >= 0 && newGear <= 6) {
+				if (isValidGearChange(newGear)) {
+					gear = newGear;
+					System.out.println("Marcha alterada para: " + gear);
+				} else {
+					System.out.println("Não é possível trocar para esta marcha devido à velocidade atual.");
+				}
+			} else {
+				System.out.println("Marcha inválida. Escolha uma marcha entre 0 e 6.");
+			}
+		} else {
+			System.out.println("Não é possível trocar a marcha. O carro está desligado.");
+		}
+	}
+
 	// Método privado para obter a velocidade máxima permitida para a marcha atual
 	private int getMaxSpeedForGear(int gear) {
 		switch (gear) {
