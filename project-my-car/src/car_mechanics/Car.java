@@ -38,12 +38,15 @@ public class Car {
 	public void accelerate() {
 		if (carIsOn) {
 			if (gear == 0) {
-
+				System.out.println("Não é possível acelerar. O carro está em ponto morto (marcha 0).");
+			} else if (speed < getMaxSpeedForGear(gear)) {
+				speed++;
+				System.out.println("Acelerando... Velocidade atual: " + speed + " km/h");
 			} else {
-
+				System.out.println("Velocidade máxima para esta marcha atingida. Troque para uma marcha maior.");
 			}
 		} else {
-
+			System.out.println("Não é possível acelerar. O carro está desligado.");
 		}
 	}
 
