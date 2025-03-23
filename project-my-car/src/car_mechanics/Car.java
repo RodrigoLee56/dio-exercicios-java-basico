@@ -33,4 +33,65 @@ public class Car {
 			System.out.println("O carro já está desligado.");
 		}
 	}
+
+	// Método para acelerar o carro
+	public void accelerate() {
+		if (carIsOn) {
+			if (gear == 0) {
+
+			} else {
+
+			}
+		} else {
+
+		}
+	}
+
+	// Método privado para obter a velocidade máxima permitida para a marcha atual
+	private int getMaxSpeedForGear(int gear) {
+		switch (gear) {
+		case 1:
+			return 20;
+		case 2:
+			return 40;
+		case 3:
+			return 60;
+		case 4:
+			return 80;
+		case 5:
+			return 100;
+		case 6:
+			return 120;
+		default:
+			return 0;
+		}
+	}
+
+	// Método privado para obter a velocidade mínima permitida para a marcha
+	private int getMinSpeedForGear(int gear) {
+		switch (gear) {
+		case 1:
+			return 0;
+		case 2:
+			return 21;
+		case 3:
+			return 41;
+		case 4:
+			return 61;
+		case 5:
+			return 81;
+		case 6:
+			return 101;
+		default:
+			return 0;
+		}
+	}
+
+	// Método privado para validar a troca de marcha com base na velocidade atual
+	public boolean isValidGearChange(int newGear) {
+		int minSpeed = getMinSpeedForGear(newGear);
+		int maxSpeed = getMaxSpeedForGear(newGear);
+
+		return speed >= minSpeed && speed <= maxSpeed;
+	}
 }
