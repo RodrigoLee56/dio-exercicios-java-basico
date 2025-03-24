@@ -87,6 +87,22 @@ public class Car {
 		}
 	}
 
+	public void turn(String side) {
+		if (carIsOn) {
+			if (speed >= 1 && speed <= 40) {
+				if (side.equalsIgnoreCase("esquerda") || side.equalsIgnoreCase("direita")) {
+					System.out.println("Viranda para a " + side + ".");
+				} else {
+					System.out.println("Direção inválida. Use a 'esquerda ou a 'direita.");
+				}
+			} else {
+				System.out.println("Não é possível virar. A velocidade deve estar entre 1km/h e 40km/h");
+			}
+		} else {
+			System.out.println("Não é possível virar. O carro está desligado.");
+		}
+	}
+
 	// Método privado para obter a velocidade máxima permitida para a marcha atual
 	private int getMaxSpeedForGear(int gear) {
 		switch (gear) {
