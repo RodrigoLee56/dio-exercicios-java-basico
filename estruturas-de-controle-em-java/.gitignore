@@ -1,0 +1,53 @@
+# Arquivos e diretórios gerados pelo Eclipse
+.bin/
+.project
+.classpath
+.settings/
+.metadata/
+
+# Arquivos compilados do Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Arquivos temporários
+*~
+*.bak
+*.tmp
+
+# Logs e diretórios de saída
+logs/
+target/
+build/
+out/
+
+# Arquivos de dependência local (Maven/Gradle)
+/.mvn/
+.mvn/
+mvnw
+mvnw.cmd
+.gradle/
+build.gradle.kts
+gradle.properties
+
+# IDEs e ferramentas específicas
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+__pycache__/
+*.py[cod]
+
+# Outros
+*.log
+*.lock
+/bin/
